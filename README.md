@@ -6,6 +6,11 @@
 
 <!-- badges: start -->
 
+![Github last
+commit](https://img.shields.io/github/last-commit/ccps-research-eval/ccpsplot)
+[![R-CMD-check](https://github.com/ccps-research-eval/ccpsplot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ccps-research-eval/ccpsplot/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/ccps-research-eval/ccpsplot/graph/badge.svg)](https://app.codecov.io/gh/ccps-research-eval/ccpsplot)
 <!-- badges: end -->
 
 The goal of ccpsplot is to …
