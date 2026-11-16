@@ -14,4 +14,5 @@ Config/testthat/edition: 3
 URL: https://ccps-research-eval.github.io/ccpsplot/
 Imports: 
     ggplot2,
+    grid,
     rlang
