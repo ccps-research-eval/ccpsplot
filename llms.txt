@@ -1,0 +1,29 @@
+# ccpsplot
+
+The goal of ccpsplot is to …
+
+## Installation
+
+You can install the development version of ccpsplot from Github with:
+
+``` r
+
+# install.packages("pak")
+pak::pak("ccps-research-eval/ccpsplot")
+```
+
+# Package index
+
+## All functions
+
+- [`scale_fill_schoolboard()`](https://ccps-research-eval.github.io/ccpsplot/reference/scale_fill_schoolboard.md)
+  [`scale_color_schoolboard()`](https://ccps-research-eval.github.io/ccpsplot/reference/scale_fill_schoolboard.md)
+  [`scale_fill_schoolboard_c()`](https://ccps-research-eval.github.io/ccpsplot/reference/scale_fill_schoolboard.md)
+  [`scale_color_schoolboard_c()`](https://ccps-research-eval.github.io/ccpsplot/reference/scale_fill_schoolboard.md)
+  : School Board Color and Fill Scales
+- [`school_board_colors()`](https://ccps-research-eval.github.io/ccpsplot/reference/school_board_colors.md)
+  [`school_board_palette()`](https://ccps-research-eval.github.io/ccpsplot/reference/school_board_colors.md)
+  : School Board Color Palette
+- [`theme_ore()`](https://ccps-research-eval.github.io/ccpsplot/reference/theme_ore.md)
+  : Theme ORE
+
