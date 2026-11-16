@@ -9,7 +9,7 @@
 #' @param faceted Logical. TRUE will reduce margins to make faceted subplots larger
 #'
 #' @importFrom ggplot2 theme_minimal theme element_line element_rect element_text
-#' @importFrom ggplot2 element_blank rel margin unit
+#' @importFrom ggplot2 element_blank rel margin
 #' @importFrom grid unit
 #'
 #' @export
@@ -34,11 +34,11 @@
 theme_ore <- function(size = 12, base_font = "sans", base_color = "grey20", accent_color = "grey40", faceted = FALSE) {
     # arg checks
     stopifnot(
-        "`size` must be a length 1 numeric vector" = is.numeric(size) && length(size) == 1,
-        "`base_font` must a length 1 character vector" = is.character(base_font) && length(base_font) == 1,
-        "`base_color` must be a length 1 character vector" = is.character(base_color) && length(base_color) == 1,
-        "`accent_color` must be a length 1 character vector" = is.character(accent_color) && length(accent_color) == 1,
-        "`faceted` must be a length 1 logical vector" = is.logical(faceted) && length(faceted) == 1
+        "`size` must be a length 1 numeric vector" = is.numeric(size) && length(size) == 1 && !is.na(size),
+        "`base_font` must a length 1 character vector" = is.character(base_font) && length(base_font) == 1 && !is.na(base_font),
+        "`base_color` must be a length 1 character vector" = is.character(base_color) && length(base_color) == 1 && !is.na(base_color),
+        "`accent_color` must be a length 1 character vector" = is.character(accent_color) && length(accent_color) == 1 && !is.na(accent_color),
+        "`faceted` must be a length 1 logical vector" = is.logical(faceted) && length(faceted) == 1 && !is.na(faceted)
     )
 
     half <- size / 2
