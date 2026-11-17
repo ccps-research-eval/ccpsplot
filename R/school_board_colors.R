@@ -15,7 +15,7 @@
 #' # Extract first 3 colors
 #' school_board_colors(3)
 school_board_colors <- function(n = NULL) {
-    stopifnot(is.null(n) || is.numeric(n), length(n) == 1)
+    stopifnot("`n` must be NULL or a length-1 positive integer" = is.null(n) || (is.numeric(n) && length(n) == 1 && !is.na(n) && n >= 1))
 
     sb_colors <- c(
         "teal" = "#00627a",
@@ -55,7 +55,7 @@ palette_gen <- function(direction = 1) {
     stopifnot(is.numeric(direction))
 
     function(n) {
-        pal <- school_board_palette(n)
+        pal <- unname(school_board_palette(n))
 
         if (direction >= 0) pal else rev(pal)
     }
@@ -63,7 +63,7 @@ palette_gen <- function(direction = 1) {
 
 # internal palette generator function for continuous scales
 palette_gen_c <- function(direction = 1, ...) {
-    pal <- school_board_palette()[1:2]
+    pal <- unname(school_board_palette()[1:2])
 
     pal <- if (direction >= 0) pal else rev(pal)
 
@@ -92,7 +92,6 @@ palette_gen_c <- function(direction = 1, ...) {
 scale_fill_schoolboard <- function(direction = 1, ...) {
     ggplot2::discrete_scale(
         aesthetics = "fill",
-        scale_name = "schoolboard",
         palette = palette_gen(direction),
         ...
     )
@@ -103,7 +102,6 @@ scale_fill_schoolboard <- function(direction = 1, ...) {
 scale_color_schoolboard <- function(direction = 1, ...) {
     ggplot2::discrete_scale(
         aesthetics = "color",
-        scale_name = "schoolboard",
         palette = palette_gen(direction),
         ...
     )
