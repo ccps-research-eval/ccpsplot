@@ -67,7 +67,7 @@ palette_gen_c <- function(direction = 1, ...) {
 
     pal <- if (direction >= 0) pal else rev(pal)
 
-    colorRampPalette(pal, ...)
+    grDevices::colorRampPalette(pal, ...)
 }
 
 #' School Board Color and Fill Scales
