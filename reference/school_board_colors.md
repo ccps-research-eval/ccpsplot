@@ -26,7 +26,10 @@ A named character vector of hex color codes.
 ``` r
 # Return all palette colors
 school_board_colors()
-#> Error in school_board_colors(): length(n) == 1 is not TRUE
+#>        teal        pink         red      orange      yellow light_green 
+#>   "#00627a"   "#cf4b9b"   "#dc4d48"   "#f68c50"   "#ffc222"   "#8ac75a" 
+#>       green  light_blue      purple 
+#> "#00a380ff"   "#00a8e5"   "#845aa6" 
 
 # Extract first 3 colors
 school_board_colors(3)
