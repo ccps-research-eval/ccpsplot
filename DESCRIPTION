@@ -1,6 +1,6 @@
 Package: ccpsplot
 Title: Plotting Utilities for CCPS
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Eric", "Ekholm", , "eric.ekholm@gmail.com", role = c("aut", "cre"))
 Description: A package that provides themes, color scales, and other plotting utilities specific to CCPS.
